@@ -17,9 +17,11 @@ class Main {
 		System.out.println("\n   (percent)   (amount)");
 		System.out.println("Ex.    50       199 \n");
 
+		// Arraylist to keep calculations in memory and recall them if necessary. (NOT IMPLEMENTED YET).
 		ArrayList<Double> thePercents = new ArrayList<Double>();
 		ArrayList<Double> theAmounts = new ArrayList<Double>();
 
+		// for single price calculations.
 		do{
 			System.out.println("(y) - To continue for an individual calculation.\n(all) - To display multiple calculations.\n(q) - to quit program..\nContinue?");
 			user = sc.nextLine();
@@ -55,14 +57,12 @@ class Main {
 
 				}while(true);
 
-				
+				// For multiple results by just entering one price.
 			}else if(user.equals("all")){
 
 				do{
 					System.out.println("Amount >> ");
 					allAmount = sc.nextLine();
-
-					//double douAllAmount = Double.parseDouble(allAmount);
 
 
 					if(allAmount.equals("q")){
@@ -89,31 +89,10 @@ class Main {
 					
 				}while(true);
 			}
-			
-/*
-			System.out.println("Amount >> ");
-			amount = sc.nextDouble();
 
 			// 25% / 100 = 0.25
 			// $80 x 0.25 = $20
 			// $80 - $20 = $60
-
-			double dottedPercent = percent / 100;
-			double amountRemaining = amount * dottedPercent;
-			double result = amount - amountRemaining;
-
-			thePercents.add(dottedPercent);
-			theAmounts.add(result);
-
-			System.out.printf("%.2f \n",(amount - result));
-			System.out.printf("%.2f \n", result);
-*/
-
-
-			/*
-			for(int i = 0; i <= 10; i++){
-				
-			}*/
 
 			
 		}while(!user.equals("q"));
