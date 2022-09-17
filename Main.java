@@ -13,11 +13,9 @@ class Main {
 		String yAmount = null;
 		String allAmount = null;
 
-		System.out.println("\nEnter the word 'specific' if you want to see percents off in more detail. Otherwise just enter a percent and the dollar amount.");
-		System.out.println("\n   (percent)   (amount)");
-		System.out.println("Ex.    50       199 \n");
+		System.out.println("\nEnter either..");
 
-		// Arraylist to keep calculations in memory and recall them if necessary. (NOT IMPLEMENTED YET).
+		// Arraylist to keep calculations in memory and recall them if necessary. (NOT IMPLEMENTED YET). Perhaps make another method that only prints the results by the user typing "history" or something similar.
 		ArrayList<Double> thePercents = new ArrayList<Double>();
 		ArrayList<Double> theAmounts = new ArrayList<Double>();
 
