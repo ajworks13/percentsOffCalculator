@@ -21,7 +21,7 @@ class Main {
 		ArrayList<Double> theAmounts = new ArrayList<Double>();
 
 		do{
-			System.out.println("(y) - To continue..\n(all) - To display multiple..\n(q) - to quit program..\nContinue?");
+			System.out.println("(y) - To continue for an individual calculation.\n(all) - To display multiple calculations.\n(q) - to quit program..\nContinue?");
 			user = sc.nextLine();
 
 			if(user.equals("y")){
@@ -30,7 +30,6 @@ class Main {
 					yPercent = sc.nextLine();
 
 					if(yPercent.equals("q")){
-						System.out.println("balls");
 						break;
 					}
 
@@ -51,8 +50,8 @@ class Main {
 					thePercents.add(dottedPercent);
 					theAmounts.add(result);
 
-					System.out.printf("%.2f is the remaining amount.\n", amountRemaining);
-					System.out.printf("%.2f the final price.\n", result);
+					System.out.printf("%.2f Is the Discount.\n", amountRemaining);
+					System.out.printf("%.2f Is the Final Price.\n", result);
 
 				}while(true);
 
@@ -73,25 +72,19 @@ class Main {
 					double numberPercent = 0.00;
 					double allPercentage = 0;
 					double douAllAmount = Double.parseDouble(allAmount);
+					
 					for(int i = 5; i <= 95; i+=5){
 						numberPercent+=0.05;
 						double theNumberPercent = numberPercent % 100;
-						double endResult = douAllAmount * theNumberPercent;
-						double dollarMinusLeftResult = endResult - douAllAmount;
-						//double allPercentage = ((i * 5) % 100);
-						//allPercentage = (numberPercent / 100);
+						double moneySaved = douAllAmount * theNumberPercent;
+						double finalPayment = moneySaved - douAllAmount;
+						
 
-						double results = douAllAmount * allPercentage;
-						//double amountOff = douAllAmount - results;
-						//System.out.printf("%.2f \n", allPercentage);
-						//System.out.printf("%.2f \n", allPercentage);
-						System.out.printf("%.2f - ", theNumberPercent);
-						System.out.printf("%.2f - ", endResult);
-						System.out.printf("%.2f - \n", dollarMinusLeftResult);
+						System.out.printf("%.2f percent off - Discount: ", theNumberPercent);
+						System.out.printf("$%.2f - Final Payment is: ", moneySaved);
+						System.out.printf("$%.2f - \n", finalPayment);
+						
 					}
-					
-					//System.out.println("(y) - To continue..\n(all) - To display multiple..\n(q) - to quit program..\nContinue?");
-
 
 					
 				}while(true);
@@ -124,6 +117,7 @@ class Main {
 
 			
 		}while(!user.equals("q"));
+		System.out.println("Have a nice day! :)");
 	
 	}
 }
