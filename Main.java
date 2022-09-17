@@ -70,11 +70,14 @@ class Main {
 						break;
 					}
 
-					int numberPercent = 0;
+					double numberPercent = 0.00;
 					double allPercentage = 0;
 					double douAllAmount = Double.parseDouble(allAmount);
 					for(int i = 5; i <= 95; i+=5){
-						numberPercent+=5;
+						numberPercent+=0.05;
+						double theNumberPercent = numberPercent % 100;
+						double endResult = douAllAmount * theNumberPercent;
+						double dollarMinusLeftResult = endResult - douAllAmount;
 						//double allPercentage = ((i * 5) % 100);
 						//allPercentage = (numberPercent / 100);
 
@@ -82,7 +85,9 @@ class Main {
 						//double amountOff = douAllAmount - results;
 						//System.out.printf("%.2f \n", allPercentage);
 						//System.out.printf("%.2f \n", allPercentage);
-						System.out.printf("%2.f", numberPercent);
+						System.out.printf("%.2f - ", theNumberPercent);
+						System.out.printf("%.2f - ", endResult);
+						System.out.printf("%.2f - \n", dollarMinusLeftResult);
 					}
 					
 					//System.out.println("(y) - To continue..\n(all) - To display multiple..\n(q) - to quit program..\nContinue?");
