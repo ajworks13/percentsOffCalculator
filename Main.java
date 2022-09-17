@@ -63,14 +63,26 @@ class Main {
 					System.out.println("Amount >> ");
 					allAmount = sc.nextLine();
 
+					//double douAllAmount = Double.parseDouble(allAmount);
+
+
 					if(allAmount.equals("q")){
 						break;
 					}
 
+					int numberPercent = 0;
+					double allPercentage = 0;
 					double douAllAmount = Double.parseDouble(allAmount);
-					for(int i = 1; i <= 9; i++){
-						double allPercentage = (i * 10);
-						System.out.println(i * 10);
+					for(int i = 5; i <= 95; i+=5){
+						numberPercent+=5;
+						//double allPercentage = ((i * 5) % 100);
+						//allPercentage = (numberPercent / 100);
+
+						double results = douAllAmount * allPercentage;
+						//double amountOff = douAllAmount - results;
+						//System.out.printf("%.2f \n", allPercentage);
+						//System.out.printf("%.2f \n", allPercentage);
+						System.out.printf("%2.f", numberPercent);
 					}
 					
 					//System.out.println("(y) - To continue..\n(all) - To display multiple..\n(q) - to quit program..\nContinue?");
